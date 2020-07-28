@@ -1,8 +1,15 @@
-import React, { useState } from 'react'
-// import Header from './components/Header/Header'
+import React, { useState, useEffect } from 'react'
+import About from './components/About/About'
 import './App.scss'
+import Cards from './components/Cards/Cards'
 
 const App = () => {
+  useEffect(() => {
+    fetch('https://zenquotes.io/api/random')
+      .then(res => console.log(res))
+      .catch()
+      
+  })
 
   const [cursor, setCursor] = useState({
     top: '',
@@ -28,7 +35,7 @@ const App = () => {
     } else {
     classCursor = ['cursor']
     classTitle = ['title']
-  }  
+  } 
 
   return (
     <div className='App' onMouseMove={mouseMove}>
@@ -42,13 +49,13 @@ const App = () => {
           Tata Rozhdez
           </h1>
         <ul>
-          <li>Home</li>
-          <li>About</li>
+          <li>About Me</li>
           <li>Project</li>
           <li>Contact</li>
         </ul>
       </div>
-
+      <About />
+      <Cards />
     </div>
   )
 }
