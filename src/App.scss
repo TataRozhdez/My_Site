@@ -2,7 +2,7 @@
 
 .App {
   width: 100vw;
-  padding: 30px;
+  
   .cursor {
     width: 2rem;
     height: 2rem;
@@ -13,13 +13,15 @@
     pointer-events: none;
     transition: all 0.3s ease;
     transition-property: background, transform;
-    transform-origin: 100% 100%;
-    z-index: -1;
+    transform-origin: 50% 50%;
+    z-index: 2;
+    background: $white;
+    opacity: 0.5;
   
     &.link-grow {
-      transform: scale(4);
+      transform: scale(6);
       border: none;
-      background: $black;
+      opacity: 1;
     }
   }
  
@@ -27,27 +29,45 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: $gray;
+    position: relative;
     width: 100vw;
     height: 100vh;
+    color: $white;
+    background: center / cover no-repeat url(./resources/img/1.jpg); 
+
+    img {
+      z-index: 1;
+      width: 100vw;
+      position: fixed;
+      opacity: 0.9;
+    }
+    
     .title {
       margin-top: 50px;
-      font-size: 5rem;
+      font-size: 7rem;
       font-family: 'Kiona-Bold';
-      transition: color 0.3s ease;
+      transition: 0.7s ease;
+      z-index: 5;
       &.hovered-title {
-        color: $white;
+        color: $black;
       }
     } 
-    &:hover {
-      color: $black;
-    }
     ul {
       margin-top: 80px;
+      z-index: 5;
+      font-size: 2rem;
       cursor: pointer;
       li {
         margin-top: 10px;
+        opacity: 0.8;
+        &:hover {
+          transform: scale(1.2);
+          transition: all 0.3s ease-in-out;
+          opacity: 1;
+          text-shadow: 10px 0 10px $white;
+        }
       }
+
     }
   }
 }

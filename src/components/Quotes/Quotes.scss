@@ -1,1 +1,15 @@
 @import '../../resources/variables';
+
+.quot {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin: 50px 0;
+  font-family: 'Roboto-Italic';
+  flex-direction: column;
+  font-size: 1.5rem;
+  span {
+    align-self: flex-end;
+  }
+}

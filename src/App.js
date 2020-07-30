@@ -1,22 +1,23 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import About from './components/About/About'
 import './App.scss'
 import Cards from './components/Cards/Cards'
+import Quotes from './components/Quotes/Quotes'
+
+import MyTransition from './resources/myTransition/MyTransition'
 
 const App = () => {
-  useEffect(() => {
-    fetch('https://zenquotes.io/api/random')
-      .then(res => console.log(res))
-      .catch()
-      
-  })
 
   const [cursor, setCursor] = useState({
     top: '',
     left: ''
   })
 
-  const [hover, setHover] = useState(false)
+  const [title, setTitle] = useState(false)
+  const [about, setAbout] = useState(false)
+  const [project, setProject] = useState(false)
+  const [contact, setContact] = useState(false)
+
   const { top, left } = cursor
   
   const mouseMove = e => {
@@ -27,34 +28,51 @@ const App = () => {
   }
 
   let classCursor = [ 'cursor' ]
-  let classTitle = [ 'title' ]
+  let classTitle = ['title']
+  let classHeader = [ 'header' ]
 
-  if (hover) {
-    classCursor.push('link-grow')  
+  if (title) {
+    classCursor.push('link-grow')
     classTitle.push('hovered-title')
-    } else {
+  } else {
     classCursor = ['cursor']
     classTitle = ['title']
   } 
 
   return (
     <div className='App' onMouseMove={mouseMove}>
-      <div className={classCursor.join(' ')} style={{ 'top': `${top}`, 'left': `${left}` }} />
-      <div className='header'>
+      <div
+        className={classCursor.join(' ')}
+        style={{ 'top': `${top}`, 'left': `${left}` }}
+      />
+      <div className={classHeader.join(' ')} > 
+        {about && <MyTransition bck='about' />}
+        {project && <MyTransition bck='project' /> }
+        {contact && <MyTransition bck='contact' /> }
         <h1
           className={classTitle.join(' ')}
-          onMouseOver={() => setHover(true)}
-          onMouseLeave={() => setHover(false)}
+          onMouseOver={() => setTitle(true)}
+          onMouseLeave={() => setTitle(false)}
         >
-          Tata Rozhdez
-          </h1>
+          Tata Zhukova
+        </h1>
         <ul>
-          <li>About Me</li>
-          <li>Project</li>
-          <li>Contact</li>
+          <li
+            onMouseOver={() => setAbout(true)}
+            onMouseLeave={() => setAbout(false)}
+          >About Me</li>
+          <li
+            onMouseOver={() => setProject(true)}
+            onMouseLeave={() => setProject(false)}
+          >Project</li>
+          <li
+            onMouseOver={() => setContact(true)}
+            onMouseLeave={() => setContact(false)}
+          >Contact</li>
         </ul>
       </div>
       <About />
+      <Quotes />
       <Cards />
     </div>
   )
