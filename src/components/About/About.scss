@@ -3,23 +3,45 @@
 .about {
   width: 100vw;
   padding: $padding;
+  @media (max-width: $xs-screen) {
+    padding: $padding-mobile;
+  }
   .container {
     border: 2px solid $black;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
     padding: 20px;
     display: flex;
+    @media (max-width: $xs-screen) {
+      border: 1px solid $black;
+      padding: $padding-mobile;
+      flex-direction: column;
+    }
+
     img {
-      max-width: 30%;
+      max-width: 37vw;
+      @media (max-width: $xs-screen) {
+        max-width: 100%;
+      }
     }
 
     .about-text {
-      margin-left: 20px;
+      margin-left: 20px;        
+      @media (max-width: $xs-screen) {
+        margin-left: 0px; 
+      }
       h3 {
       font-family: 'Callstories';
-      font-size: 2rem;
+      font-size: 4vw;
+        @media (max-width: $xs-screen) {
+          font-size: 7.01vw;
+        }
       }
       p {
         font-family: 'Roboto';
-        font-size: 1.2rem;
+        font-size: 2vw;
+        @media (max-width: $xs-screen) {
+          font-size: 4vw;
+        }
       }
     }
   }

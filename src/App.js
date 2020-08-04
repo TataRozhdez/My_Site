@@ -31,65 +31,93 @@ const App = () => {
     setCursor({
       top: e.pageY + 'px',
       left: e.pageX + 'px',
-      x: +e.clientX - 185 + 'px',
-      y: +e.clientY + 20  + 'px'
+      x: +e.clientX - 80 + 'px',
+      y: +e.clientY - 70 + 'px'
     })
   
   }
 
   let classCursor = [ 'cursor' ]
-  let classTitle = ['title']
   let classHeader = [ 'header' ]
 
   if (title) {
     classCursor.push('link-grow')
-    // classTitle.push('hovered-title')
   } else {
     classCursor = ['cursor']
-    classTitle = ['title']
   } 
+
+  const scrolProj = e => {
+
+  }
 
   return (
     <div className='App' onMouseMove={mouseMove}>
       <div
         className={classCursor.join(' ')}
-        style={{ 'top': `${top}`, 'left': `${left}` }}
+        style={{ top: `${top}`, left: `${left}` }}
       />
-      <div className={classHeader.join(' ')} > 
-        {about && <Transition timeout={500}><Fade><img src={bck2} alt='bck' /></Fade></Transition>}
-        {project && <Transition timeout={500}><Fade><img src={bck3} alt='bck' /></Fade></Transition> }
-        {contact && <Transition timeout={500}><Fade><img src={bck4} alt='bck' /></Fade></Transition> }
+      <div className={classHeader.join(' ')}>
+        {about && (
+          <Transition timeout={500}>
+            <Fade>
+              <img src={bck2} alt='bck' />
+            </Fade>
+          </Transition>
+        )}
+        {project && (
+          <Transition timeout={500}>
+            <Fade>
+              <img src={bck3} alt='bck' />
+            </Fade>
+          </Transition>
+        )}
+        {contact && (
+          <Transition timeout={500}>
+            <Fade>
+              <img src={bck4} alt='bck' />
+            </Fade>
+          </Transition>
+        )}
 
-        <div className="container">
+        <div className='container'>
           <h1
-            className={classTitle.join(' ')}
+            className='title'
             onMouseOver={() => setTitle(true)}
             onMouseLeave={() => setTitle(false)}
           >
             Tata Zhukova
           </h1>
-
           <h1
-            className="title-text"
-            // aria-hidden="true"
-            style={{ clipPath: `circle(21% at ${x} ${y})` }}
-          >Tata Zhukova</h1>
+            className='title-text'
+            style={{ clipPath: `circle(80px at ${x} ${y})` }}
+          >
+            Tata Zhukova
+          </h1>
         </div>
 
-        <ul>
-          <li
-            onMouseOver={() => setAbout(true)}
-            onMouseLeave={() => setAbout(false)}
-          >About Me</li>
-          <li
-            onMouseOver={() => setProject(true)}
-            onMouseLeave={() => setProject(false)}
-          >Project</li>
-          <li
-            onMouseOver={() => setContact(true)}
-            onMouseLeave={() => setContact(false)}
-          >Contact</li>
-        </ul>
+        <Fade cascade>
+          <ul>
+            <li
+              onMouseOver={() => setAbout(true)}
+              onMouseLeave={() => setAbout(false)}
+            >
+              About Me
+            </li>
+            <li
+              onMouseOver={() => setProject(true)}
+              onMouseLeave={() => setProject(false)}
+              onClick={scrolProj}
+            >
+              Project
+            </li>
+            <li
+              onMouseOver={() => setContact(true)}
+              onMouseLeave={() => setContact(false)}
+            >
+              Contact
+            </li>
+          </ul>
+        </Fade>
       </div>
       <About />
       <Quotes />

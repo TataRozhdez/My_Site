@@ -26,7 +26,7 @@ const cards = [
     img: quiz,
     link: 'https://tatarozhdez.github.io/Random_Joke/',
     name: 'Random Joke',
-    info: 'The project was made as a test task - a generator of random jokes from Chuck Noris. It is written according to the layout from Figma; connected API; added saving jokes to the Local Storage.'
+    info: 'A generator of random jokes. You can saving favorite jokes to your the Local Storage.'
   },
   {
     id: 4,

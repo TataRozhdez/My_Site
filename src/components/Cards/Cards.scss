@@ -2,12 +2,12 @@
 
 .cards {
   display: grid;
-  padding: 20px 0;
   grid-template-columns: repeat(4, auto);
   grid-gap: 20px;
   padding: $padding;
-
+  justify-content: center;
   @media (max-width: $xs-screen) {
-    grid-template-columns: repeat(1, auto);
+    padding: $padding-mobile;
+    grid-template-columns: repeat(2, auto);
   }
 }
