@@ -25,25 +25,27 @@
       border: none;
       opacity: 1;
     }
+    @media (max-width: $xs-screen) {
+      display: none;
+    }
   }
 
   .chevron {
-    position: absolute;
-    // position: sticky;
-    right: 5%;
+    // opacity: 0.5;
+    position: sticky;
+    left: 95%;
     bottom: 5%;
     z-index: 99;
-    animation: 3s linear 1s infinite running slidein;
+    animation: 3s linear 2s infinite running slidein;
     @media (max-width: $xs-screen) {
-      animation: 3s linear 1s infinite running slidein-mobile;
+      animation: 3s linear 2s infinite running slidein-mobile;
     }
     img {
-      width: 30px;
+      width: 25px;
       @media (max-width: $xs-screen) {
         width: 20px;
       }
-    }
-    
+    }  
   }
  
   .header {
@@ -106,7 +108,7 @@
 
 @keyframes slidein {
   from {
-    bottom: 2%;
+    bottom: 3%;
     opacity: 0.7;
   }
 
@@ -119,7 +121,7 @@
 @keyframes slidein-mobile {
   from {
     bottom: 7%;
-    opacity: 0.7;
+    opacity: 0.5;
   }
 
   to {

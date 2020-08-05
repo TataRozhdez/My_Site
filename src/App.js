@@ -110,7 +110,7 @@ const App = () => {
       <Quotes />
       <Cards />
       <Contact />
-      <a className='chevron' href='#top'><img src={chevron} alt='up' /></a>
+      {window.scrollY > 0 ? <a className='chevron' href='#top'><img src={chevron} alt='up' /></a> : null}
     </div>
   )
 }
