@@ -39,7 +39,7 @@ const cards = [
 
 const Cards = () => {
   return (
-    <div className='cards'>
+    <div id='project' className='cards'>
       {
         cards.map(card => <CardItem key={card.id} card={card} />)
       }

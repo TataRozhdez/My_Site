@@ -7,7 +7,8 @@ import Quotes from './components/Quotes/Quotes'
 import bck2 from './resources/img/10.jpg'
 import bck3 from './resources/img/3.jpg'
 import bck4 from './resources/img/4.jpg'
-import Fade from 'react-reveal'
+import chevron from './resources/img/chevron.png'
+import Fade from 'react-reveal/Fade'
 import { Transition } from 'react-transition-group'
 import Contact from './components/Contact/Contact'
 
@@ -25,16 +26,13 @@ const App = () => {
   const [project, setProject] = useState(false)
   const [contact, setContact] = useState(false)
 
-  const { top, left, x, y } = cursor
+  const { top, left } = cursor
   
   const mouseMove = e => {
     setCursor({
       top: e.pageY + 'px',
-      left: e.pageX + 'px',
-      x: +e.clientX - 80 + 'px',
-      y: +e.clientY - 70 + 'px'
+      left: e.pageX + 'px'
     })
-  
   }
 
   let classCursor = [ 'cursor' ]
@@ -46,12 +44,8 @@ const App = () => {
     classCursor = ['cursor']
   } 
 
-  const scrolProj = e => {
-
-  }
-
   return (
-    <div className='App' onMouseMove={mouseMove}>
+    <div className='App' id="top" onMouseMove={mouseMove}>
       <div
         className={classCursor.join(' ')}
         style={{ top: `${top}`, left: `${left}` }}
@@ -87,12 +81,6 @@ const App = () => {
           >
             Tata Zhukova
           </h1>
-          <h1
-            className='title-text'
-            style={{ clipPath: `circle(80px at ${x} ${y})` }}
-          >
-            Tata Zhukova
-          </h1>
         </div>
 
         <Fade cascade>
@@ -101,20 +89,19 @@ const App = () => {
               onMouseOver={() => setAbout(true)}
               onMouseLeave={() => setAbout(false)}
             >
-              About Me
+              <a href='#about'>About Me</a> 
             </li>
             <li
               onMouseOver={() => setProject(true)}
               onMouseLeave={() => setProject(false)}
-              onClick={scrolProj}
             >
-              Project
+              <a href='#project'>Project</a> 
             </li>
             <li
               onMouseOver={() => setContact(true)}
               onMouseLeave={() => setContact(false)}
             >
-              Contact
+              <a href='#contact'>Contact</a> 
             </li>
           </ul>
         </Fade>
@@ -123,6 +110,7 @@ const App = () => {
       <Quotes />
       <Cards />
       <Contact />
+      <a className='chevron' href='#top'><img src={chevron} alt='up' /></a>
     </div>
   )
 }

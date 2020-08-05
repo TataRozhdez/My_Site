@@ -9,7 +9,7 @@ import facebook from '../../resources/img/facebook.png'
 
 const Contact = () => {
   return (
-    <div className='contact'>
+    <div id='contact' className='contact'>
       <img className='footer-bck' src={footerBck} alt='background' />
       <h3>Find me on another platforms...</h3>
       <div className='link'>

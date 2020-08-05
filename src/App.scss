@@ -2,6 +2,7 @@
 
 .App {
   width: 100vw;
+  position: relative;
   
   .cursor {
     width: 32px;
@@ -17,12 +18,32 @@
     z-index: 2;
     background: $white;
     opacity: 0.5;
+    mix-blend-mode: difference;
   
     &.link-grow {
       transform: scale(6);
       border: none;
       opacity: 1;
     }
+  }
+
+  .chevron {
+    position: absolute;
+    // position: sticky;
+    right: 5%;
+    bottom: 5%;
+    z-index: 99;
+    animation: 3s linear 1s infinite running slidein;
+    @media (max-width: $xs-screen) {
+      animation: 3s linear 1s infinite running slidein-mobile;
+    }
+    img {
+      width: 30px;
+      @media (max-width: $xs-screen) {
+        width: 20px;
+      }
+    }
+    
   }
  
   .header {
@@ -43,33 +64,12 @@
       justify-content: center;
       align-items: center;
 
-      .title,
-      .title-text {
+      .title {
         font-size: 12.63vw;
         font-family: 'Kiona-Bold';
         transition: 0.7s ease;
-      } 
-      .title-text {
-        z-index: 6;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        color: $black;
-        pointer-events: none;
-        opacity: 0;
-        transition: opacity 250ms ease;
-      }
-      .title {
         z-index: 5;
-
-        &:hover {
-          color: $white;
-          ~ .title-text {
-            opacity: 1;
-          }
-        }
+        text-shadow: 2px 0 2px $gray-darker;
       }
     }
 
@@ -90,13 +90,40 @@
       li {
         line-height: 3rem;
         opacity: 0.8;
-        &:hover {
-          transform: scale(1.2);
-          transition: all 0.3s ease-in-out;
-          opacity: 1;
-          text-shadow: 10px 0 10px $white;
+        a {
+          color: $white;
+          &:hover {
+            transform: scale(1.2);
+            transition: all 0.3s ease-in-out;
+            opacity: 1;
+            text-shadow: 10px 0 10px $white;
+          }
         }
       }
     }
+  }
+}
+
+@keyframes slidein {
+  from {
+    bottom: 2%;
+    opacity: 0.7;
+  }
+
+  to {
+    bottom: 5%;
+    opacity: 0.1;
+  }
+}
+
+@keyframes slidein-mobile {
+  from {
+    bottom: 7%;
+    opacity: 0.7;
+  }
+
+  to {
+    bottom: 8%;
+    opacity: 0.1;
   }
 }
