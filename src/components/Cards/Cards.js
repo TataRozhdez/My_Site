@@ -5,35 +5,51 @@ import contactkeeper from '../../resources/img/contactkeeper.png'
 import icecream from '../../resources/img/icecream.png'
 import quiz from '../../resources/img/quiz.png'
 import randomjoke from '../../resources/img/randomjoke.png'
+import wind from '../../resources/img/wind.png'
+import css from '../../resources/img/css.png'
 
 const cards = [
   {
     id: 1,
-    img: contactkeeper,
+    img: icecream,
     link: 'https://icecream-tata.firebaseapp.com/',
     name: 'Ice Cream',
     info: 'Made using \'create-react-app\'. According to the layout of an existing site.'
   },
   {
     id: 2,
-    img: icecream,
+    img: quiz,
     link: 'https://react-quiz-tata.firebaseapp.com/',
     name: 'Quiz App',
     info:'React application for creating and passing tests.'
   },
   {
     id: 3,
-    img: quiz,
+    img: randomjoke ,
     link: 'https://tatarozhdez.github.io/Random_Joke/',
     name: 'Random Joke',
     info: 'A generator of random jokes. You can saving favorite jokes to your the Local Storage.'
   },
   {
     id: 4,
-    img: randomjoke,
+    img: contactkeeper,
     link: 'https://evening-savannah-89796.herokuapp.com/login',
     name: 'Contact Keeper',
     info: 'You can run test app with email: \'test@gmail.com\' & password: \'123456\', or create your own account.'
+  },
+  {
+    id: 5,
+    img: css,
+    link: 'https://css-drawing.web.app/',
+    name: 'CSS-Drawing',
+    info: 'Drawing images only with CSS.'
+  },
+  {
+    id: 6,
+    img: wind,
+    link: 'https://wind-pg.web.app/',
+    name: 'Contact Keeper',
+    info: 'Website sketch.'
   }
 ]
 
