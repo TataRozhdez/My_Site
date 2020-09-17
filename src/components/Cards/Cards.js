@@ -7,6 +7,7 @@ import randomjoke from '../../resources/img/randomjoke.png'
 import wind from '../../resources/img/wind.png'
 import css from '../../resources/img/css.png'
 import poker from '../../resources/img/pokercards.png'
+import appco from '../../resources/img/appco.png'
 import './Cards.scss'
 
 const cards = [
@@ -56,9 +57,16 @@ const cards = [
     id: 7,
     img: wind,
     link: 'https://wind-pg.web.app/',
-    name: 'Wind page',
+    name: 'Wind-Page',
     info: 'Website sketch.'
   },
+  {
+    id: 8,
+    img: appco,
+    link: 'https://appco-react.web.app/',
+    name: 'Statistics-Render',
+    info: 'Application that renders statistics of site visits.'
+  }
 ]
 
 const Cards = () => {
