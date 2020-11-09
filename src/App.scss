@@ -3,7 +3,12 @@
 .App {
   width: 100vw;
   position: relative;
-  
+
+  canvas {
+    width: 100vw;
+    height: 100vh;
+  }
+
   .cursor {
     width: 32px;
     height: 32px;
@@ -19,7 +24,7 @@
     background: $white;
     opacity: 0.5;
     mix-blend-mode: difference;
-  
+
     &.link-grow {
       transform: scale(6);
       border: none;
@@ -31,7 +36,6 @@
   }
 
   .chevron {
-    // opacity: 0.5;
     position: sticky;
     left: 95%;
     bottom: 5%;
@@ -45,9 +49,9 @@
       @media (max-width: $xs-screen) {
         width: 20px;
       }
-    }  
+    }
   }
- 
+
   .header {
     display: flex;
     flex-direction: column;
@@ -56,8 +60,8 @@
     width: 100vw;
     height: 100vh;
     overflow-y: hidden;
-    color: $white; 
-    background: center / cover no-repeat url(./resources/img/1.jpg); 
+    color: $white;
+    background: center / cover no-repeat url(./resources/img/1.jpg);
     justify-content: center;
 
     .container {
@@ -82,7 +86,7 @@
       position: absolute;
       opacity: 0.9;
     }
-    
+
     ul {
       margin-top: 7.813vw;
       padding: 0;

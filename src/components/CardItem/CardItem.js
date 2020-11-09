@@ -6,23 +6,23 @@ const CardItem = ({ card: { img, link, name, info } }) => {
   return (
     <div className='card'>
       <div className='front'>
-        <a href={link}>
+        <a href={link} target='_bank'>
           <img src={img} alt={name} />
           <h3>{name}</h3>
         </a>
       </div>
       <div className='back'>
-        <a href={link}>
+        <a href={link} target='_bank'>
           <h3>{name}</h3>
           <p>{info}</p>
-        </a>   
+        </a>
       </div>
     </div>
   )
 }
 
 CardItem.propTypes = {
-  card: PropTypes.object.isRequired
+  card: PropTypes.object.isRequired,
 }
 
 export default CardItem

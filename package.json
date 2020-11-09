@@ -6,14 +6,15 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "drei": "^1.5.7",
     "node-sass": "^4.14.1",
-    "rc-animate": "^3.1.0",
-    "rc-tween-one": "^2.7.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-reveal": "^1.2.2",
     "react-scripts": "3.4.1",
-    "react-transition-group": "^4.4.1"
+    "react-three-fiber": "^5.1.9",
+    "react-transition-group": "^4.4.1",
+    "three": "^0.122.0"
   },
   "scripts": {
     "start": "react-scripts start",

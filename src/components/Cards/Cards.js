@@ -63,9 +63,9 @@ const cards = [
   {
     id: 8,
     img: appco,
-    link: 'https://appco-react.web.app/',
-    name: 'Statistics-Render',
-    info: 'Application that renders statistics of site visits.'
+    link: 'https://sudoku-ts.web.app/',
+    name: 'Sudoku Web App',
+    info: 'Create with using React, Redux, TypeScript, StyledComponents.'
   }
 ]
 
