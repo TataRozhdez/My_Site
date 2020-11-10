@@ -4,14 +4,15 @@
   width: 100vw;
   height: 100vh;
   padding: $padding 0;
-  @media (max-width: $xs-screen) {
-    padding: $padding-mobile;
-    flex-direction: column;
-  }
   display: flex;
   align-items: flex-end;
   text-align: left;
-
+  @media (max-width: $xs-screen) {
+    height: 80vh;
+    padding: $padding-mobile;
+    justify-content: center;
+    align-items: center;
+  }
   .about-text {
     padding: 0 20px 0 30px;
     background-color: #f5bcbbba;

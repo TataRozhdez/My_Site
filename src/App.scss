@@ -24,32 +24,10 @@
     .videoTag {
       min-width: 100vw;
       min-height: 100vh;
-    }
-  }
 
-  .cursor {
-    width: 32px;
-    height: 32px;
-    border: 1px solid $gray-darker;
-    border-radius: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    transition: all 0.3s ease;
-    transition-property: background, transform;
-    transform-origin: 50% 50%;
-    z-index: 2;
-    background: $white;
-    opacity: 0.5;
-    mix-blend-mode: difference;
-
-    &.link-grow {
-      transform: scale(6);
-      border: none;
-      opacity: 1;
-    }
-    @media (max-width: $xs-screen) {
-      display: none;
+      @media (max-width: $sm-screen) {
+        max-height: 100vh;
+      }
     }
   }
 

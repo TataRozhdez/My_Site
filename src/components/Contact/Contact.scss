@@ -22,11 +22,12 @@
   }
   h3 {
     font-family: 'IndieFlower';
-    font-size: 55px;
+    font-size: 5.371vw;
     font-weight: 500;
     z-index: 5;
     color: $white;
     @media (max-width: $xs-screen) {
+      font-size: 6.588vw;
       line-height: 12.471vw;
     }
   }

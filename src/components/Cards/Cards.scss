@@ -16,6 +16,10 @@
   h2 {
     text-align: right;
     max-width: 20.833vw;
+
+    @media (max-width: $xs-screen) {
+      line-height: 8vw;
+    }
   }
   @media (max-width: $xs-screen) {
     padding: $padding-mobile;
