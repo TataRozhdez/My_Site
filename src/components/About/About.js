@@ -1,34 +1,26 @@
 import React from 'react'
 import './About.scss'
-import aboutImg from '../../resources/img/photo.jpeg'
 
 const About = () => {
   return (
     <div id='about' className='about'>
-      <div className='container'>
-        <img src={aboutImg} alt='Tata' />
-        <div className='about-text'>
-          <h3>About me</h3>
-          <p>
-            Hi, everyone!
-            <br />
-            <br />
-            My name is Tatiana and I’m a front-end developer, vegetarian and
-            25-year-old female. I like to learn new things, and I like to try to
-            understand complex issues, so I fell in love with IT. I’ve been
-            studying web-development since February 2020. Below you can see some
-            examples of my work.
-            <br />
-            <br />
-            In my free time, I like to walk in the park, practice yoga and sit
-            with my friends in some cozy place. We can talk about cultures and
-            customs, about travel, about new technologies, etc. <br />
-            I’m always glad to meet new people. You can tell me " Hi!" and
-            subscribe to other social networks. Links can be seen below. <br />
-            <br />
-            Have a nice day &#128420;
-          </p>
-        </div>
+      <div className='about-text'>
+        <h2>Hi, everyone!</h2>
+        <p>
+          {'\u00A0\u00A0'}My name is Tatiana. I’m vegetarian and optimistic
+          person. I like to learn new things and try to understand complex
+          issues. Therefore I fell in love with IT.
+        </p>
+        <p>
+          {'\u00A0\u00A0'}In my free time, I like to walk in the park, practice
+          yoga and spend time with my friends. We talk about cultures and
+          customs, travel, new technologies, etc.
+        </p>
+        <p>
+          {'\u00A0\u00A0'}I’m always glad to meet new people. You can tell me "
+          Hi!" and subscribe to other social networks. Links can be seen below.
+        </p>
+        <h3>Have a nice day!</h3>
       </div>
     </div>
   )

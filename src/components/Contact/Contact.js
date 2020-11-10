@@ -11,24 +11,26 @@ const Contact = () => {
   return (
     <div id='contact' className='contact'>
       <img className='footer-bck' src={footerBck} alt='background' />
-      <h3>Find me on another platforms...</h3>
-      <div className='link'>
-        <a href='https://github.com/TataRozhdez'>
-          <img src={github} alt='github' />
-          &nbsp;Github
-        </a>
-        <a href='https://www.linkedin.com/in/tata-zhukova-b0610b19a/'>
-          <img src={linkedin} alt='linkedin' />
-          &nbsp;LinkedIn
-        </a> 
-        <a href='https://www.instagram.com/tata_rozhdez/?hl=ru'>
-          <img src={instagram} alt='instagram' />
-          &nbsp;Instagram
-        </a>
-        <a href='https://www.facebook.com/profile.php?id=100005407309063'>
-          <img src={facebook} alt='facebook' />
-          &nbsp;Facebook
-        </a>
+      <div className='contact-text'>
+        <h3>Find me on another platforms:</h3>
+        <div className='link'>
+          <a href='https://github.com/TataRozhdez'>
+            <img src={github} alt='github' />
+            &nbsp;Github
+          </a>
+          <a href='https://www.linkedin.com/in/tata-zhukova-b0610b19a/'>
+            <img src={linkedin} alt='linkedin' />
+            &nbsp;LinkedIn
+          </a>
+          <a href='https://www.instagram.com/tata_rozhdez/?hl=ru'>
+            <img src={instagram} alt='instagram' />
+            &nbsp;Instagram
+          </a>
+          <a href='https://www.facebook.com/profile.php?id=100005407309063'>
+            <img src={facebook} alt='facebook' />
+            &nbsp;Facebook
+          </a>
+        </div>
       </div>
     </div>
   )

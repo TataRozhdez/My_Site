@@ -1,11 +1,22 @@
 @import '../../resources/variables';
 
+.cards-fill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: $padding;
+}
 .cards {
   display: grid;
   grid-template-columns: repeat(4, auto);
   grid-gap: 20px;
-  padding: $padding;
+  max-width: 1000px;
+  align-items: center;
   justify-content: center;
+  h2 {
+    text-align: right;
+    max-width: 20.833vw;
+  }
   @media (max-width: $xs-screen) {
     padding: $padding-mobile;
     grid-template-columns: repeat(3, auto);

@@ -8,7 +8,7 @@ function Plant() {
 
   return (
     <>
-      <primitive object={gltf.scene} position={[5, -15, 0]} />
+      <primitive object={gltf.scene} position={[0, -10, -10]} />
     </>
   )
 }

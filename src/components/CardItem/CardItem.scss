@@ -20,7 +20,7 @@
     left: 0;
     transition: 1s;
     backface-visibility: hidden;
-    border: 2px solid $black;
+    border: 2px solid #c2c2c2;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,25 +28,23 @@
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
 
     @media (max-width: $xs-screen) {
-      border: 1px solid $black;
+      border: 1px solid #c2c2c2;
     }
   }
 
   .front {
     background-color: $white;
+    @media (max-width: $xs-screen) {
+      display: none;
+    }
 
     img {
       width: 10.417vw;
-      @media (max-width: $xs-screen) {
-        width: 13.42vw;
-      }
     }
     h3 {
       font-size: 2.1vw;
       line-height: 3.6vw;
-      @media (max-width: $xs-screen) {
-        font-size: 3.1vw;
-      }
+      font-weight: 600;
     }
   }
   .back {
@@ -54,10 +52,11 @@
     transform: rotateY(180deg);
     padding: $padding;
     @media (max-width: $xs-screen) {
+      transform: rotateY(360deg);
       padding: $padding-mobile;
     }
     h3 {
-      font-family: 'Callstories';
+      font-weight: 600;
       font-size: 2.4vw;
       line-height: 3.418vw;
       @media (max-width: $xs-screen) {

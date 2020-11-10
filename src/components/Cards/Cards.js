@@ -16,65 +16,71 @@ const cards = [
     img: poker,
     link: 'https://combination-trainer.web.app/',
     name: 'Hand Trainer',
-    info: 'A game designed to train the speed of poker hand detection.'
+    info: 'A game designed to train the speed of poker hand detection.',
   },
   {
     id: 2,
     img: quiz,
     link: 'https://react-quiz-tata.firebaseapp.com/',
     name: 'Quiz App',
-    info:'React application for creating and passing tests.'
+    info: 'React application for creating and passing tests.',
   },
   {
     id: 3,
-    img: randomjoke ,
+    img: randomjoke,
     link: 'https://tatarozhdez.github.io/Random_Joke/',
     name: 'Random Joke',
-    info: 'A generator of random jokes. You can saving favorite jokes to your the Local Storage.'
+    info:
+      'A generator of random jokes. You can saving favorite jokes to your the Local Storage.',
   },
   {
     id: 4,
     img: contactkeeper,
     link: 'https://evening-savannah-89796.herokuapp.com/login',
     name: 'Contact Keeper',
-    info: 'You can run test app with email: \'test@gmail.com\' & password: \'123456\', or create your own account.'
+    info:
+      "You can run test app with email: 'test@gmail.com' & password: '123456', or create your own account.",
   },
   {
     id: 5,
     img: icecream,
     link: 'https://icecream-tata.firebaseapp.com/',
     name: 'Ice Cream',
-    info: 'Made using \'create-react-app\'. According to the layout of an existing site.'
+    info:
+      "Made using 'create-react-app'. According to the layout of an existing site.",
   },
   {
     id: 6,
     img: css,
     link: 'https://css-drawing.web.app/',
     name: 'CSS-Drawing',
-    info: 'Drawing images only with CSS.'
+    info: 'Drawing images only with CSS.',
   },
   {
     id: 7,
     img: wind,
     link: 'https://wind-pg.web.app/',
     name: 'Wind-Page',
-    info: 'Website sketch.'
+    info: 'Website sketch.',
   },
   {
     id: 8,
     img: appco,
     link: 'https://sudoku-ts.web.app/',
     name: 'Sudoku Web App',
-    info: 'Create with using React, Redux, TypeScript, StyledComponents.'
-  }
+    info: 'Create with using React, Redux, TypeScript, StyledComponents.',
+  },
 ]
 
 const Cards = () => {
   return (
-    <div id='project' className='cards'>
-      {
-        cards.map(card => <CardItem key={card.id} card={card} />)
-      }
+    <div className='cards-fill'>
+      <div id='project' className='cards'>
+        <h2>You can see some examples of my work here:</h2>
+        {cards.map((card) => (
+          <CardItem key={card.id} card={card} />
+        ))}
+      </div>
     </div>
   )
 }

@@ -11,15 +11,14 @@ const Quotes = () => {
     setQuot(quotesJson[num])
   }, [])
 
-    return (
-      <div className='quot'>
-        <p>
-          &#171; {quot.q} &#187;
-        </p>
+  return (
+    <div className='quot'>
+      <div className='quot-content'>
+        <h2>&#171; {quot.q} &#187;</h2>
         <span>&#169; {quot.a}</span>
       </div>
-    );
-  
+    </div>
+  )
 }
 
 export default Quotes
