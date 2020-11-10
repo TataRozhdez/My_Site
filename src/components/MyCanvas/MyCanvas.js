@@ -17,13 +17,15 @@ const Title = () => {
 
 export const MyCanvas = () => {
   return (
-    <Canvas camera={{ position: [0, 5, 25] }}>
-      <ambientLight intensity={2} />
-      <pointLight position={[10, 0, 10]} />
-      <Suspense fallback={null}>
-        <Title />
-      </Suspense>
-      <OrbitControls enableZoom={false} autoRotate={true} />
-    </Canvas>
+    <div className='MyCanvas'>
+      <Canvas camera={{ position: [0, 5, 25] }}>
+        <ambientLight intensity={2} />
+        <pointLight position={[10, 0, 10]} />
+        <Suspense fallback={null}>
+          <Title />
+        </Suspense>
+        <OrbitControls enableZoom={false} autoRotate={true} />
+      </Canvas>
+    </div>
   )
 }

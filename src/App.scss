@@ -7,9 +7,13 @@
   overflow-y: scroll;
   overflow-x: hidden;
 
+  .MyCanvas,
   canvas {
     width: 100vw;
     height: 100vh;
+    @media (max-width: $sm-screen) {
+      height: 70vh;
+    }
   }
 
   .parallax__layer--back {
