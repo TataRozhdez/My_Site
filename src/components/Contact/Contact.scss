@@ -2,15 +2,19 @@
 
 .contact {
   display: flex;
-  // align-items: flex-end;
-  text-align: right;
-  align-items: flex-end;
   flex-direction: column;
-  padding: 0 0 30px;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  width: 100%;
+  text-align: left;
+  color: $white;
+  overflow: hidden;
   position: relative;
-
+  // box-shadow: $shadow-container;
+  background: linear-gradient(to bottom, rgba($bck, 0.5), rgba(#29b6f6, 0.4));
   .footer-bck {
-    z-index: -1;
+    z-index: -99;
     width: 100vw;
     height: 100%;
     position: absolute;
@@ -18,18 +22,7 @@
   }
 
   .contact-text {
-    padding-right: $padding;
-  }
-  h3 {
-    font-family: 'IndieFlower';
-    font-size: 5.371vw;
-    font-weight: 500;
-    z-index: 5;
-    color: $white;
-    @media (max-width: $xs-screen) {
-      font-size: 6.588vw;
-      line-height: 12.471vw;
-    }
+    width: 680px;
   }
   .link {
     z-index: 5;

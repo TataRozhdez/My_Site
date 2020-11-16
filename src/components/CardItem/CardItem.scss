@@ -1,84 +1,71 @@
 @import '../../resources/variables';
 
-.card {
-  width: 20.833vw;
-  height: 27.778vw;
+.grid {
+  color: $white;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
   position: relative;
-  perspective: 1000px;
-  cursor: pointer;
-  @media (max-width: $xs-screen) {
-    width: 25.882vw;
-    height: 60vw;
+  overflow: hidden;
+  z-index: -10;
+  box-shadow: $shadow-container;
+
+  a {
+    color: $white;
   }
 
-  .front,
-  .back {
+  .card-icon {
+    width: 13px;
+  }
+
+  .card-bck {
+    opacity: 0.65;
     position: absolute;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
+    z-index: -1;
     top: 0;
     left: 0;
-    transition: 1s;
-    backface-visibility: hidden;
-    border: 2px solid #c2c2c2;
+
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+  }
+
+  &:hover > .card-bck {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  .card-content {
+    z-index: 2;
+    padding: 20px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
 
-    @media (max-width: $xs-screen) {
-      border: 1px solid #c2c2c2;
-    }
-  }
-
-  .front {
-    background-color: $white;
-    @media (max-width: $xs-screen) {
-      display: none;
-    }
-
-    img {
-      width: 10.417vw;
-    }
-    h3 {
-      font-size: 2.1vw;
-      line-height: 3.6vw;
+    .card_info {
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
       font-weight: 600;
-    }
-  }
-  .back {
-    background-color: $blue;
-    transform: rotateY(180deg);
-    padding: $padding;
-    @media (max-width: $xs-screen) {
-      transform: rotateY(360deg);
-      padding: $padding-mobile;
-    }
-    h3 {
-      font-weight: 600;
-      font-size: 2.4vw;
-      line-height: 3.418vw;
-      @media (max-width: $xs-screen) {
-        font-size: 6.1vw;
-        line-height: 8.4vw;
+      text-align: center;
+
+      &:hover {
+        color: rgba(white, 0.7);
+        text-decoration: none;
       }
     }
-    p {
-      font-family: 'Roboto';
-      font-size: 1.4vw;
-      padding-top: 10px;
-      @media (max-width: $xs-screen) {
-        font-size: 3.1vw;
-        padding-top: $padding-mobile;
-      }
+    .card_footer-link {
+      display: flex;
+      justify-content: space-between;
     }
-  }
-
-  &:hover .front {
-    transform: rotateY(180deg);
-  }
-  &:hover .back {
-    transform: rotateY(360deg);
   }
 }

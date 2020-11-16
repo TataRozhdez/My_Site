@@ -2,32 +2,44 @@
 
 .about {
   width: 100vw;
-  height: 100vh;
-  padding: $padding 0;
   display: flex;
   align-items: flex-end;
   text-align: left;
+  position: relative;
   @media (max-width: $xs-screen) {
     height: 80vh;
-    padding: $padding-mobile;
+    // padding: $padding-mobile;
     justify-content: center;
     align-items: center;
   }
+  img {
+    width: 200px;
+    position: absolute;
+    float: left;
+    left: 178px;
+    top: -85px;
+    transform: rotate(-28deg);
+  }
   .about-text {
-    padding: 0 20px 0 30px;
-    background-color: #f5bcbbba;
-    border-top: 1px solid #c2c2c2;
-    border-bottom: 1px solid #c2c2c2;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     @media (max-width: $xs-screen) {
       margin-left: 0px;
     }
     p {
-      font-family: 'IndieFlower';
       font-size: 2vw;
+      max-width: 595px;
       @media (max-width: $xs-screen) {
         font-size: 4vw;
       }
+    }
+    p:nth-child(1),
+    p:nth-child(2) {
+      padding-left: 140px;
     }
   }
 }

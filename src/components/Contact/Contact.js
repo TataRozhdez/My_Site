@@ -12,7 +12,10 @@ const Contact = () => {
     <div id='contact' className='contact'>
       <img className='footer-bck' src={footerBck} alt='background' />
       <div className='contact-text'>
-        <h3>Find me on another platforms:</h3>
+        <h2>
+          {'\u00A0\u00A0'}You can tell me "Hi!" and subscribe on another
+          platforms:
+        </h2>
         <div className='link'>
           <a href='https://github.com/TataRozhdez'>
             <img src={github} alt='github' />

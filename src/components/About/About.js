@@ -1,26 +1,23 @@
 import React from 'react'
+import myPhoto from '../../resources/img/I.png'
 import './About.scss'
 
 const About = () => {
   return (
     <div id='about' className='about'>
+      <img src={myPhoto} alt='Tata Zhukova' />
       <div className='about-text'>
-        <h2>Hi, everyone!</h2>
+        <p>Hi there!</p>
         <p>
           {'\u00A0\u00A0'}My name is Tatiana. I’m vegetarian and optimistic
-          person. I like to learn new things and try to understand complex
-          issues. Therefore I fell in love with IT.
+          person. I like to learn new things and entertaining challenges.
         </p>
         <p>
-          {'\u00A0\u00A0'}In my free time, I like to walk in the park, practice
-          yoga and spend time with my friends. We talk about cultures and
-          customs, travel, new technologies, etc.
+          {'\u00A0\u00A0'}In my free time, I like practice yoga, walking in the
+          park, and spend time with my friends. My favorite quote: &#171;Love
+          what you do and do what you love&#187;.
         </p>
-        <p>
-          {'\u00A0\u00A0'}I’m always glad to meet new people. You can tell me "
-          Hi!" and subscribe to other social networks. Links can be seen below.
-        </p>
-        <h3>Have a nice day!</h3>
+        <p>Have a nice day!</p>
       </div>
     </div>
   )

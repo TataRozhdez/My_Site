@@ -7,17 +7,8 @@
   overflow-y: scroll;
   overflow-x: hidden;
 
-  .MyCanvas,
-  canvas {
-    width: 100vw;
-    height: 100vh;
-    @media (max-width: $sm-screen) {
-      height: 70vh;
-    }
-  }
-
-  .parallax__layer--back {
-    z-index: -999;
+  .parallax__layer-back {
+    z-index: -99;
     position: fixed;
     top: 0;
     left: 0;
@@ -35,44 +26,10 @@
     }
   }
 
-  .chevron {
-    position: sticky;
-    left: 95%;
-    bottom: 5%;
-    z-index: 99;
-    animation: 3s linear 2s infinite running slidein;
-    @media (max-width: $xs-screen) {
-      animation: 3s linear 2s infinite running slidein-mobile;
-    }
-    img {
-      width: 25px;
-      @media (max-width: $xs-screen) {
-        width: 20px;
-      }
-    }
-  }
-}
-
-@keyframes slidein {
-  from {
-    bottom: 3%;
-    opacity: 0.7;
-  }
-
-  to {
-    bottom: 5%;
-    opacity: 0.1;
-  }
-}
-
-@keyframes slidein-mobile {
-  from {
-    bottom: 7%;
-    opacity: 0.5;
-  }
-
-  to {
-    bottom: 8%;
-    opacity: 0.1;
+  .app-content {
+    width: 100%;
+    background-color: $bck;
+    box-shadow: $shadow-container;
+    margin: ($height - 7vw) 0 ($height - 12vw);
   }
 }

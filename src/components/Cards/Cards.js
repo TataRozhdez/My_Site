@@ -1,86 +1,83 @@
 import React from 'react'
 import CardItem from '../CardItem/CardItem'
-import contactkeeper from '../../resources/img/contactkeeper.png'
-import icecream from '../../resources/img/icecream.png'
-import quiz from '../../resources/img/quiz.png'
-import randomjoke from '../../resources/img/randomjoke.png'
-import wind from '../../resources/img/wind.png'
-import css from '../../resources/img/css.png'
-import poker from '../../resources/img/pokercards.png'
-import appco from '../../resources/img/appco.png'
+import imgBck1 from '../../resources/img/1.jpeg'
+import imgBck2 from '../../resources/img/2.jpeg'
+import imgBck3 from '../../resources/img/3.jpeg'
+import imgBck4 from '../../resources/img/4.jpeg'
+import imgBck5 from '../../resources/img/5.jpeg'
+import imgBck6 from '../../resources/img/6.jpeg'
+import imgBck7 from '../../resources/img/7.jpeg'
 import './Cards.scss'
 
 const cards = [
   {
     id: 1,
-    img: poker,
+    bck: imgBck1,
     link: 'https://combination-trainer.web.app/',
-    name: 'Hand Trainer',
-    info: 'A game designed to train the speed of poker hand detection.',
+    github: 'https://github.com/TataRozhdez/Poker-Hand-Trainer',
+    info: 'The game developed for practice hand detection in poker',
+    tech: 'React/Sass',
   },
   {
     id: 2,
-    img: quiz,
-    link: 'https://react-quiz-tata.firebaseapp.com/',
-    name: 'Quiz App',
-    info: 'React application for creating and passing tests.',
+    bck: imgBck2,
+    link: 'https://icecream-tata.firebaseapp.com/',
+    github: 'https://github.com/TataRozhdez/Ice_Cream',
+    info: 'Web site with design copied from wix.com',
+    tech: 'Rect/Sass',
   },
   {
     id: 3,
-    img: randomjoke,
-    link: 'https://tatarozhdez.github.io/Random_Joke/',
-    name: 'Random Joke',
+    bck: imgBck3,
+    link: 'https://evening-savannah-89796.herokuapp.com/login',
+    github: 'https://github.com/TataRozhdez/Contact_Keeper',
     info:
-      'A generator of random jokes. You can saving favorite jokes to your the Local Storage.',
+      'Phonebook. You can run test with email: test@gmail.com / password: 123456',
+    tech: 'MERN',
   },
   {
     id: 4,
-    img: contactkeeper,
-    link: 'https://evening-savannah-89796.herokuapp.com/login',
-    name: 'Contact Keeper',
-    info:
-      "You can run test app with email: 'test@gmail.com' & password: '123456', or create your own account.",
+    bck: imgBck4,
+    link: 'https://proshopapp-t.herokuapp.com/',
+    github: 'https://github.com/TataRozhdez/ProShop_mern',
+    info: 'Example of full stack electronic sales site',
+    tech: 'MERN',
   },
   {
     id: 5,
-    img: icecream,
-    link: 'https://icecream-tata.firebaseapp.com/',
-    name: 'Ice Cream',
-    info:
-      "Made using 'create-react-app'. According to the layout of an existing site.",
+    bck: imgBck5,
+    link: 'https://sudoku-ts.web.app/',
+    github: 'https://github.com/TataRozhdez/Sudoku_TS',
+    info: 'Sudoku web-game',
+    tech: 'React/TypeScript',
   },
   {
     id: 6,
-    img: css,
-    link: 'https://css-drawing.web.app/',
-    name: 'CSS-Drawing',
-    info: 'Drawing images only with CSS.',
+    bck: imgBck6,
+    link: 'https://react-quiz-tata.firebaseapp.com/',
+    github: 'https://github.com/TataRozhdez/Quiz_App',
+    info: 'Application for creating and passing tests',
+    tech: 'React/Redux',
   },
   {
     id: 7,
-    img: wind,
-    link: 'https://wind-pg.web.app/',
-    name: 'Wind-Page',
-    info: 'Website sketch.',
-  },
-  {
-    id: 8,
-    img: appco,
-    link: 'https://sudoku-ts.web.app/',
-    name: 'Sudoku Web App',
-    info: 'Create with using React, Redux, TypeScript, StyledComponents.',
+    bck: imgBck7,
+    link: 'https://tatarozhdez.github.io/Random_Joke/',
+    github: 'https://github.com/TataRozhdez/Random_Joke',
+    info: 'Generator of random jokes from Chuck Noris',
+    tech: 'JS/Html/Css',
   },
 ]
 
 const Cards = () => {
   return (
     <div className='cards-fill'>
-      <div id='project' className='cards'>
-        <h2>You can see some examples of my work here:</h2>
+      <h2>Explor some examples of my work</h2>
+      <ul id='project' className='cards'>
         {cards.map((card) => (
           <CardItem key={card.id} card={card} />
         ))}
-      </div>
+      </ul>
     </div>
   )
 }

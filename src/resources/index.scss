@@ -1,13 +1,20 @@
 @import './variables';
 @import './fonts/fonts';
 
-* {
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
   font-size: $font-size;
-  font-family: 'IndieFlower', 'DancingScript', sans-serif;
+  font-family: 'OpenSans-Regular', 'Montserrat-Regular', 'Devnew', sans-serif;
+  font-weight: 400;
   color: $black;
   scroll-behavior: smooth;
 }
@@ -27,6 +34,10 @@ body {
   overflow-y: scroll;
   background-attachment: fixed;
   perspective: 1px;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
 }
 
 ul {
@@ -36,4 +47,18 @@ ul {
 a {
   text-decoration: none;
   color: $black;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h2 {
+  font-family: 'Montserrat-Regular';
+  font-weight: 400;
+  margin-bottom: 15px;
+  width: 700px;
+  text-align: left;
+  @media (max-width: $xs-screen) {
+    line-height: 8vw;
+  }
 }
