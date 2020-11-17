@@ -55,10 +55,13 @@ a {
 h2 {
   font-family: 'Montserrat-Regular';
   font-weight: 400;
-  margin-bottom: 15px;
-  width: 700px;
+  margin-bottom: 1.042vw;
+  width: 50vw;
   text-align: left;
-  @media (max-width: $xs-screen) {
-    line-height: 8vw;
+  font-size: 1.667vw;
+
+  @media (max-width: $xs-mobile) {
+    font-size: 2.7vw;
+    width: 74vw;
   }
 }

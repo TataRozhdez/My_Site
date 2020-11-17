@@ -5,24 +5,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 50px 0;
+  padding: 3.472vw 0;
   width: 100%;
   text-align: left;
-  h2 {
-    font-family: 'Montserrat-Regular';
-    font-weight: 400;
-    margin-bottom: 15px;
-    width: 680px;
-    text-align: left;
-    @media (max-width: $xs-screen) {
-      line-height: 8vw;
-    }
-  }
+
   .cards {
     display: grid;
-    grid-template-columns: repeat(3, 220px);
-    grid-template-rows: repeat(3, 200px);
-    grid-gap: 10px;
+    grid-template-columns: repeat(3, 17.361vw);
+    grid-template-rows: repeat(3, 13.889vw);
+    grid-gap: 0.694vw;
+
+    @media (max-width: $xs-mobile) {
+      grid-template-columns: repeat(3, 25.6vw);
+      grid-template-rows: repeat(3, 18.8vw);
+      grid-gap: 1.7vw;
+    }
 
     li {
       position: relative;

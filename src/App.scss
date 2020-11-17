@@ -20,7 +20,7 @@
       min-width: 100vw;
       min-height: 100vh;
 
-      @media (max-width: $sm-screen) {
+      @media (max-width: $tablet) {
         max-height: 100vh;
       }
     }
@@ -31,5 +31,10 @@
     background-color: $bck;
     box-shadow: $shadow-container;
     margin: ($height - 7vw) 0 ($height - 12vw);
+
+    @media (max-width: $xs-mobile) {
+      margin: ($height-mobile - 7vw) 0 ($height-mobile - 12vw);
+      min-height: 54vh;
+    }
   }
 }

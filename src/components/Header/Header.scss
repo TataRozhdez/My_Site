@@ -12,10 +12,20 @@
   text-align: center;
   box-shadow: $shadow-container;
 
+  @media (max-width: $xs-mobile) {
+    height: $height-mobile;
+    min-height: 15vh;
+  }
+
   .custom-canvas,
   canvas {
     width: 40vw;
     height: 16vw;
+
+    @media (max-width: $xs-mobile) {
+      width: 64vw;
+      height: 20vw;
+    }
   }
 
   .header-mantra {

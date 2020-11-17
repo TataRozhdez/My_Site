@@ -29,11 +29,10 @@ const cards = [
   {
     id: 3,
     bck: imgBck3,
-    link: 'https://evening-savannah-89796.herokuapp.com/login',
-    github: 'https://github.com/TataRozhdez/Contact_Keeper',
-    info:
-      'Phonebook. You can run test with email: test@gmail.com / password: 123456',
-    tech: 'MERN',
+    link: 'https://sudoku-ts.web.app/',
+    github: 'https://github.com/TataRozhdez/Sudoku_TS',
+    info: 'Sudoku web-game',
+    tech: 'React/TypeScript',
   },
   {
     id: 4,
@@ -46,10 +45,11 @@ const cards = [
   {
     id: 5,
     bck: imgBck5,
-    link: 'https://sudoku-ts.web.app/',
-    github: 'https://github.com/TataRozhdez/Sudoku_TS',
-    info: 'Sudoku web-game',
-    tech: 'React/TypeScript',
+    link: 'https://evening-savannah-89796.herokuapp.com/login',
+    github: 'https://github.com/TataRozhdez/Contact_Keeper',
+    info:
+      'Phonebook; you can run test with email: test@gmail.com / password: 123456 ',
+    tech: 'MERN',
   },
   {
     id: 6,
