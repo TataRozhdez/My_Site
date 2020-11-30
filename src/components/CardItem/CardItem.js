@@ -11,8 +11,7 @@ const CardItem = ({ card: { link, bck, github, info, tech } }) => {
       <img className='card-bck' src={bck} alt='backgtound' />
       <div className='card-content'>
         <p>
-          <img className='card-icon' src={editImg} alt='Made with' />
-          {tech}
+          <img className='card-icon' src={editImg} alt='Made with' /> {tech}
         </p>
         <a
           className='card_info'
@@ -20,6 +19,7 @@ const CardItem = ({ card: { link, bck, github, info, tech } }) => {
           target='_blank'
           rel='noopener noreferrer'
         >
+          {' '}
           {info}
         </a>
         <p className='card_footer-link'>
@@ -28,7 +28,7 @@ const CardItem = ({ card: { link, bck, github, info, tech } }) => {
               className='card-icon'
               src={githubImg}
               alt='Github repositorie'
-            />
+            />{' '}
             Repo
           </a>
           <a href={link} target='_blank' rel='noopener noreferrer'>

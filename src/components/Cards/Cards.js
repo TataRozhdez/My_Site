@@ -45,11 +45,10 @@ const cards = [
   {
     id: 5,
     bck: imgBck5,
-    link: 'https://evening-savannah-89796.herokuapp.com/login',
-    github: 'https://github.com/TataRozhdez/Contact_Keeper',
-    info:
-      'Phonebook; you can run test with email: test@gmail.com / password: 123456 ',
-    tech: 'MERN',
+    link: 'https://pht-gallery.web.app/',
+    github: 'https://github.com/TataRozhdez/PhotoGallery',
+    info: 'Simple photo gallery web-application.',
+    tech: 'React/Sass',
   },
   {
     id: 6,
@@ -72,7 +71,7 @@ const cards = [
 const Cards = () => {
   return (
     <div className='cards-fill'>
-      <h2>Explor some examples of my work</h2>
+      <h2>Explore some examples of my work</h2>
       <ul id='project' className='cards'>
         {cards.map((card) => (
           <CardItem key={card.id} card={card} />

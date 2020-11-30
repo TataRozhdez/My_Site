@@ -1,5 +1,5 @@
 import React from 'react'
-import myPhoto from '../../resources/img/I.png'
+import myPhoto from '../../resources/img/I-min.png'
 import './About.scss'
 
 const About = () => {
@@ -10,12 +10,12 @@ const About = () => {
         <p>Hi there!</p>
         <p>
           {'\u00A0\u00A0'}My name is Tatiana. I’m vegetarian and optimistic
-          person. I like to learn new things and entertaining challenges.
+          person. I like learning new things and entertaining challenges.
         </p>
         <p>
-          {'\u00A0\u00A0'}In my free time, I like practice yoga, walking in the
-          park, and spend time with my friends. My favorite quote: &#171;Love
-          what you do and do what you love&#187;.
+          {'\u00A0\u00A0'}In my free time, I like practicing yoga, walking in
+          the park, and spending time with my friends. My favorite quote:
+          &#171;Love what you do and do what you love&#187;.
         </p>
         <p>Have a nice day!</p>
       </div>
