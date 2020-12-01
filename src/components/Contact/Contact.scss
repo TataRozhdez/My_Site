@@ -11,7 +11,7 @@
   color: $white;
   overflow: hidden;
   position: relative;
-  background: linear-gradient(to bottom, rgba($bck, 0.5), rgba(#29b6f6, 0.4));
+  background: linear-gradient(to bottom, rgba($bck, 0.5), rgba(#29b6f600, 0));
 
   @media (max-width: $xs-mobile) {
     min-height: 15vh;
@@ -52,7 +52,7 @@
     }
 
     a {
-      background-color: #1d541f30;
+      background-color: #29b6f600;
       border-radius: 3px;
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
       transition: 0.3s ease;
@@ -66,15 +66,19 @@
       }
 
       img {
-        width: 1.389vw;
+        width: 2.389vw;
         @media (max-width: $xs-mobile) {
-          width: 3.7vw;
+          width: 4.7vw;
         }
       }
 
       &:hover {
         transform: translateY(-0.694vw);
-        background-color: #5f641430;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(41, 182, 246, 0.37) 100%
+        );
       }
     }
   }
