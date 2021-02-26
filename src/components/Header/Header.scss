@@ -41,6 +41,12 @@
     font-size: 4vw;
     font-weight: 400;
     line-height: 6vw;
+    z-index: 999;
+  }
+  .none {
+    z-index: 99;
+    position: absolute;
+    opacity: 0;
   }
 }
 

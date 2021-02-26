@@ -17,7 +17,7 @@
     width: 100vw;
     overflow-x: hidden;
     .videoTag {
-      min-width: 100vw;
+      width: 100vw;
       min-height: 100vh;
 
       @media (max-width: $tablet) {

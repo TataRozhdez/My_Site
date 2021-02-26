@@ -5,7 +5,7 @@ import './About.scss'
 const About = () => {
   return (
     <div id='about' className='about'>
-      <img src={myPhoto} alt='Tata Zhukova' />
+      <img src={myPhoto} alt='Tata Zhukova' title="It's me" />
       <div className='about-text'>
         <p>Hi there!</p>
         <p>

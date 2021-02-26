@@ -28,11 +28,13 @@ const CardItem = ({ card: { link, bck, github, info, tech } }) => {
               className='card-icon'
               src={githubImg}
               alt='Github repositorie'
+              title='Github repositorie'
             />{' '}
             Repo
           </a>
           <a href={link} target='_blank' rel='noopener noreferrer'>
-            <img className='card-icon' src={arrowImg} alt='Link' /> Visit
+            <img className='card-icon' src={arrowImg} alt='Link' title='Link' />{' '}
+            Visit
           </a>
         </p>
       </div>
