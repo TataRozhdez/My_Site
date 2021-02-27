@@ -10,10 +10,10 @@ const Contact = () => {
   return (
     <div id='contact' className='contact'>
       <div className='contact-text'>
-        <h2>
+        <h3>
           {'\u00A0\u00A0'}You can tell me "Hi!" and subscribe on another
           platforms:
-        </h2>
+        </h3>
         <div className='link'>
           <a
             href='https://github.com/TataRozhdez'

@@ -13,15 +13,17 @@ const CardItem = ({ card: { link, bck, github, info, tech } }) => {
         <p>
           <img className='card-icon' src={editImg} alt='Made with' /> {tech}
         </p>
-        <a
-          className='card_info'
-          href={link}
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          {' '}
-          {info}
-        </a>
+        <h4 className='card_info'>
+          <a
+            className='card_info'
+            href={link}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            {' '}
+            {info}
+          </a>
+        </h4>
         <p className='card_footer-link'>
           <a href={github} target='_blank' rel='noopener noreferrer'>
             <img

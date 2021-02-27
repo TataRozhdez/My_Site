@@ -71,7 +71,7 @@ const cards = [
 const Cards = () => {
   return (
     <div className='cards-fill'>
-      <h2>Explore some examples of my work</h2>
+      <h3>Explore some examples of my work</h3>
       <ul id='project' className='cards'>
         {cards.map((card) => (
           <CardItem key={card.id} card={card} />

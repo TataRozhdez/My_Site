@@ -9,7 +9,6 @@ export const Header = () => {
         <img src={mandalaImg} alt='Manadala' />
       </div>
       <h1 className='header-mantra'>ॐ गं गणपतये नमः</h1>
-      <h1 className='none'>Tata Rozhdez. Personal website</h1>
     </div>
   )
 }

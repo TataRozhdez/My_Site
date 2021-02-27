@@ -29,9 +29,10 @@
       width: 74vw;
     }
 
-    h2 {
+    h6 {
       font-weight: 500;
-      font-size: 1.667vw;
+      font-size: 2vw;
+      padding-bottom: 0.5rem;
       @media (max-width: $xs-mobile) {
         font-size: 2.5vw;
       }

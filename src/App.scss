@@ -17,12 +17,8 @@
     width: 100vw;
     overflow-x: hidden;
     .videoTag {
-      width: 100vw;
+      min-width: 100vw;
       min-height: 100vh;
-
-      @media (max-width: $tablet) {
-        max-height: 100vh;
-      }
     }
   }
 
@@ -33,7 +29,6 @@
     margin: ($height - 7vw) 0 ($height - 12vw);
 
     @media (max-width: $xs-mobile) {
-      margin: ($height-mobile - 7vw) 0 ($height-mobile - 12vw);
       min-height: 54vh;
     }
   }
