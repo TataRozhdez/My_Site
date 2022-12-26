@@ -7,6 +7,7 @@ import About from "./components/About";
 import Works from "./components/Works";
 import Contact from "./components/Contact/Contact";
 
+import { ReactComponent as ImgFibonacci } from "./resources/images/fibonacci.svg";
 import "./App.scss";
 
 const App = () => {
@@ -102,7 +103,7 @@ const App = () => {
             />
 
             <div className="app-background">
-                <div className="app-fibonacci" />
+                <ImgFibonacci className="app-fibonacci" />
 
                 <div className="app-mandala" />
 

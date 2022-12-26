@@ -27,11 +27,13 @@
     height: 100%;
     left: 0;
     width: 100vw;
-    background: url("./resources/images/fibonacci.svg") no-repeat center;
-    background-size: contain;
 
     path {
       animation: dash 3s linear;
+    }
+
+    @media (min-width: 2408px) {
+      display: none;
     }
 
     @media (max-width: $bp_mobile) {
@@ -80,7 +82,7 @@
     font-family: "Permanent Marker", serif;
     animation: 2s linear fadeIn;
     left: 50%;
-    top: 30%;
+    top: 20%;
     transform: translateX(-50%);
     font-size: 3.5vw;
     white-space: nowrap;
@@ -89,7 +91,6 @@
       white-space: pre;
       font-size: 7vw;
       text-align: center;
-      top: 20%;
     }
   }
 
