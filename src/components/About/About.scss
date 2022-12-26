@@ -1,82 +1,200 @@
-@import '../../resources/variables';
+@import "../../resources/variables";
+
+@import url("https://fonts.googleapis.com/css?family=Lato:700");
+
+$default-size: 1em;
+$label-font-size: calc($default-size / 4);
+$label-font-size-redo: $default-size * 4;
+
+@mixin size($width, $height) {
+    height: $height;
+    width: $width;
+}
+
+@mixin draw-progress($progress, $color) {
+    .pie {
+        .half-circle {
+            border-color: $color;
+        }
+
+        .left-side {
+            transform: rotate($progress * 3.6deg);
+        }
+
+        @if $progress <= 50 {
+            .right-side {
+                display: none;
+            }
+        } @else {
+            clip: rect(auto, auto, auto, auto);
+
+            .right-side {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
 
 .about {
-  width: 100vw;
-  display: flex;
-  align-items: flex-end;
-  text-align: left;
-  position: relative;
-  font-family: 'Montserrat-Regular';
-  img {
-    width: 16vw;
-    position: absolute;
-    float: left;
-    left: 15.972vw;
-    top: -6.875vw;
-    transform: rotate(-28deg);
-    animation: fade-in-top 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-
-    @media (max-width: $xs-mobile) {
-      left: 4vw;
-      width: 23vw;
-      top: -9.875vw;
-    }
-  }
-  .about-text {
-    padding: 0;
-    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 10px;
-    text-align: center;
-    h1 {
-      font-size: 4vw;
-      max-width: 52vw;
-      @media (max-width: $xs-mobile) {
-        font-size: 5vw;
-        max-width: 76vw;
-      }
-    }
-    h2 {
-      font-size: 3vw;
-      max-width: 52vw;
-      text-align: center;
-      @media (max-width: $xs-mobile) {
-        font-size: 5vw;
-        max-width: 76vw;
-      }
+    flex-direction: row;
+
+    @media (max-width: $bp_tablet_m) {
+        flex-direction: column-reverse;
+        align-items: center;
     }
 
-    p {
-      font-size: 2vw;
-      max-width: 52vw;
+    .about-skills,
+    .about-text {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
 
-      @media (max-width: $xs-mobile) {
-        font-size: 3vw;
-        max-width: 74vw;
-      }
+        @media (max-width: $bp_tablet_m) {
+            width: 100%;
+        }
     }
-    p:nth-child(1),
-    p:nth-child(2) {
-      padding-left: 9.722vw;
 
-      @media (max-width: $xs-mobile) {
-        padding-left: 13.22vw;
-      }
+    .about-text {
+        justify-content: center;
+        text-align: center;
+
+        @media (max-width: $bp_tablet_m) {
+            margin-bottom: 32px;
+        }
+
+        .text__greeting {
+            text-align: center;
+            font-family: "Permanent Marker", serif;
+        }
+
+        p + p {
+            margin-top: 8px;
+        }
     }
-  }
+
+    .about-skills {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        margin: auto;
+        max-width: 500px;
+    }
+
+    .skill-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 33%;
+        margin-bottom: 16px;
+    }
+
+    .skill-box__text {
+        @media (max-width: $bp_tablet_m) {
+            font-size: 12px;
+        }
+    }
+
+    .pie-wrapper {
+        @include size($default-size, $default-size);
+        font-size: 100px;
+        height: 100px;
+        width: 100px;
+        float: left;
+        margin: 0 0 4px;
+        position: relative;
+        font-family: "Permanent Marker", serif;
+
+        @media (max-width: $bp_tablet_m) {
+            font-size: 80px;
+            height: 80px;
+            width: 80px;
+        }
+
+        &:nth-child(3n + 1) {
+            clear: both;
+        }
+
+        .pie {
+            @include size(100%, 100%);
+            clip: rect(0, $default-size, $default-size, calc($default-size / 2));
+            left: 0;
+            position: absolute;
+            top: 0;
+
+            .half-circle {
+                @include size(100%, 100%);
+                border: calc($default-size / 10) solid #3498db;
+                border-radius: 50%;
+                clip: rect(0, calc($default-size / 2), $default-size, 0);
+                left: 0;
+                position: absolute;
+                top: 0;
+            }
+        }
+
+        .label {
+            border-radius: 50%;
+            bottom: calc($label-font-size-redo / 10);
+            cursor: default;
+            display: block;
+            font-size: $label-font-size;
+            left: calc($label-font-size-redo / 10);
+            line-height: $label-font-size-redo * .70;
+            position: absolute;
+            right: calc($label-font-size-redo / 10);
+            text-align: center;
+            top: calc($label-font-size-redo / 10);
+            color: $gray;
+            font-family: "Permanent Marker", serif;
+
+            .smaller {
+                color: $gray;
+                font-size: .45em;
+                padding-bottom: 20px;
+                vertical-align: super;
+            }
+        }
+
+        .shadow {
+            @include size(100%, 100%);
+            border: calc($default-size / 10) solid #ebe8e0;
+            border-radius: 50%;
+        }
+
+        &.progress-65 {
+            @include draw-progress(45, #3498db);
+        }
+
+        &.progress-70 {
+            @include draw-progress(60, #0004ff);
+        }
+
+        &.progress-75 {
+            @include draw-progress(70, #7400ff);
+        }
+
+        &.progress-79 {
+            @include draw-progress(75, #b565d7);
+        }
+
+        &.progress-88 {
+            @include draw-progress(78, #e67e22);
+        }
+
+        &.progress-90 {
+            @include draw-progress(90, #e74c3c);
+        }
+    }
+
+    .text__end {
+        text-align: end;
+        padding-right: 48px;
+    }
 }
 
-@keyframes fade-in-top {
-  0% {
-    -webkit-transform: translateY(-50px);
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0) rotate(-28deg);
-    transform: translateY(0) rotate(-28deg);
-    opacity: 1;
-  }
-}
+
+
+

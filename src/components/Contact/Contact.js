@@ -1,52 +1,52 @@
-import React from 'react'
-import './Contact.scss'
+import React from "react";
 
-import github from '../../resources/img/github-white.png'
-import linkedin from '../../resources/img/linkedin.png'
-import instagram from '../../resources/img/instagram.png'
-import facebook from '../../resources/img/facebook.png'
+import ImgInstagram from "./imeges/instagram.svg";
+import ImgGithub from "./imeges/github.svg";
+import ImgLinkedin from "./imeges/linkedin.svg";
+import ImgTelegram from "./imeges/telegram.svg";
+import ImgGmail from "./imeges/gmail.svg";
+import "./Contact.scss";
 
 const Contact = () => {
-  return (
-    <div id='contact' className='contact'>
-      <div className='contact-text'>
-        <h3>
-          {'\u00A0\u00A0'}You can tell me "Hi!" and subscribe on another
-          platforms:
-        </h3>
-        <div className='link'>
-          <a
-            href='https://github.com/TataRozhdez'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <img src={github} alt='github' title='Github' />
-          </a>
-          <a
-            href='https://www.linkedin.com/in/tata-zhukova-b0610b19a/'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <img src={linkedin} alt='linkedin' title='Linkedin' />
-          </a>
-          <a
-            href='https://www.instagram.com/tata_rozhdez/?hl=ru'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <img src={instagram} alt='instagram' title='Instagram' />
-          </a>
-          <a
-            href='https://www.facebook.com/profile.php?id=100005407309063'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <img src={facebook} alt='facebook' title='Facebook' />
-          </a>
-        </div>
-      </div>
-    </div>
-  )
-}
+    const text = `You can tell me "Hi!" \nand subscribe on another platforms:`;
 
-export default Contact
+    return (
+        <div className="contact">
+            <p className="contact-text">{text}</p>
+
+            <div className="link">
+                <div className="link__wrapper">
+                    <a href="https://github.com/TataRozhdez" target="_blank" rel="noopener noreferrer">
+                        <img alt="github" src={ImgGithub} />
+                    </a>
+                </div>
+
+                <div className="link__wrapper">
+                    <a href="https://www.linkedin.com/in/tetianazhukova/" target="_blank" rel="noopener noreferrer">
+                        <img alt="linkedin" src={ImgLinkedin} />
+                    </a>
+                </div>
+
+                <div className="link__wrapper">
+                    <a href="https://www.instagram.com/glorious_amanta/" target="_blank" rel="noopener noreferrer">
+                        <img alt="instagram" src={ImgInstagram} />
+                    </a>
+                </div>
+
+                <div className="link__wrapper">
+                    <a href="https://t.me/glorious_amanta" target="_blank" rel="noopener noreferrer">
+                        <img alt="telegram" src={ImgTelegram} />
+                    </a>
+                </div>
+
+                <div className="link__wrapper">
+                    <a href="mailto:tanya.zhukova.95@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <img alt="gmail" src={ImgGmail} />
+                    </a>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Contact;

@@ -1,18 +1,22 @@
-$font-size: 16px;
-$height: 23vw;
-$height-mobile: 27vw;
+$font-size: 18px;
+
 $padding-mobile: 20vw;
-$bck: #ffffffa3;
 
 $shadow-container: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
 
-$gray: #dfdddd;
-$gray-darker: #424242;
-$blue: #e6ffff;
-$white: #fff;
-$black: #000;
-$fiolet: #523084;
+// Light theme
+$base-light: #FFFFFF;
+$gold-light: #FFD24C;
+$yellow-light: #FFE69A;
+$blue-light: #92B4EC;
 
-$tablet: 769px;
-$xs-mobile: 574px;
-$sm-mobile: 430px;
+// Dark theme
+$black: #171717;
+$gray: #444444;
+$gold-dark: #A27B5C;
+$yellow-dark: #DCD7C9;
+$white-dark: #DCD7C9;
+
+$bp_tablet: 1024px;
+$bp_tablet_m: 768px;
+$bp_mobile: 480px;

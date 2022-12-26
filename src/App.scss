@@ -1,35 +1,156 @@
-@import './resources/variables';
+@import "./resources/variables";
 
-.App {
-  width: 100vw;
-  height: 100vh;
+.app {
   position: relative;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
 
-  .parallax__layer-back {
-    z-index: -99;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+  .app-background {
     width: 100vw;
-    overflow-x: hidden;
-    .videoTag {
-      min-width: 100vw;
-      min-height: 100vh;
+    height: 99vh;
+    position: relative;
+    z-index: -1;
+
+    @media (max-width: $bp_tablet_m) {
+      height: 50vh;
+    }
+
+    @media (max-width: $bp_mobile) {
+      height: 25vh;
     }
   }
 
-  .app-content {
-    width: 100%;
-    background-color: $bck;
-    box-shadow: $shadow-container;
-    margin: ($height - 7vw) 0 ($height - 12vw);
+  .app-fibonacci {
+    position: absolute;
+    top: 11%;
+    height: 100%;
+    left: 0;
+    width: 100vw;
+    background: url("./resources/images/fibonacci.svg") no-repeat center;
+    background-size: contain;
 
-    @media (max-width: $xs-mobile) {
-      min-height: 54vh;
+    path {
+      animation: dash 3s linear;
     }
+
+    @media (max-width: $bp_mobile) {
+      display: none;
+    }
+  }
+
+  .app-mandala {
+    position: fixed;
+    left: 0;
+    top: -50%;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.1;
+    background: url("./resources/images/mandala.svg") no-repeat center;
+    background-size: contain;
+    animation: rotate-mandala 300s linear infinite;
+
+    @media (max-width: $bp_tablet_m) {
+      width: 50vh;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: rotate-mandala__mobile 300s linear infinite;
+    }
+  }
+
+  .app-mantra {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translateX(-50%);
+    width: 10vw;
+    height: 10vw;
+    opacity: .2;
+    background: url("./resources/images/Aum.svg") no-repeat center;
+    background-size: contain;
+    animation: 2s linear fadeInMandala;
+
+    @media (max-width: $bp_mobile) {
+      display: none;
+    }
+  }
+
+  .app-quot {
+    position: absolute;
+    font-family: "Permanent Marker", serif;
+    animation: 2s linear fadeIn;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    font-size: 3.5vw;
+    white-space: nowrap;
+
+    @media (max-width: $bp_mobile) {
+      white-space: pre;
+      font-size: 7vw;
+      text-align: center;
+      top: 20%;
+    }
+  }
+
+  ._app-block {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    min-height: 60vh;
+    font-family: inherit;
+    position: relative;
+    padding: 1rem;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInMandala {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: .2;
+  }
+}
+
+@keyframes rotate-mandala {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-mandala__mobile {
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dasharray: 3000;
+    stroke-dashoffset: 3000;
+  }
+
+  to {
+    stroke-dashoffset: 0;
   }
 }
