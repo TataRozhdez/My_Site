@@ -28,13 +28,13 @@ const Contact = () => {
                 </div>
 
                 <div className="link__wrapper">
-                    <a href="https://www.instagram.com/glorious_amanta/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/glorious_reality/" target="_blank" rel="noopener noreferrer">
                         <img alt="instagram" src={ImgInstagram} />
                     </a>
                 </div>
 
                 <div className="link__wrapper">
-                    <a href="https://t.me/glorious_amanta" target="_blank" rel="noopener noreferrer">
+                    <a href="https://t.me/glorious_reality" target="_blank" rel="noopener noreferrer">
                         <img alt="telegram" src={ImgTelegram} />
                     </a>
                 </div>
